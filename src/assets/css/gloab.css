@@ -3,3 +3,14 @@ html,body,#app{
     margin: 0;
     padding: 0;
 }
+.el-breadcrumb{
+    margin-bottom: 15px;
+}
+.el-table{
+    margin-top: 15px;
+
+}
+/* 解决表格不对齐问题 */
+body .el-table th.gutter {
+    display: table-cell !important
+}

@@ -62,8 +62,8 @@ export default {
                 
                 const {data: res} = await this.$http.post("login",this.login_form)
                 console.log(res);
-                if(res.meta.status !== 200)return this.$message.error("登录失败");                ;
-                this.$message.success("登录成功");
+                if(res.meta.status !== 200)return this.$message.error(res.meta.msg);                ;
+                this.$message.success(res.meta.msg);
                 window.sessionStorage.setItem("token" , res.data.token)
                 this.$router.push("/home")
                 
@@ -89,7 +89,7 @@ export default {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%,-50%);
 
     .login_loge{
         width: 130px;
