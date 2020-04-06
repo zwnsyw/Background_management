@@ -15,3 +15,7 @@ html,body,#app{
 body .el-table th.gutter {
     display: table-cell !important
 }
+/* 解决树控件表格与表头不对齐问题 */
+.zk-table__body-wrapper {
+    display: table-cell !important
+}

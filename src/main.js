@@ -7,6 +7,8 @@ import './plugins/element.js'
 import "./assets/css/gloab.css"
 // 导入字体图标
 import "./assets/fonts/iconfont.css"
+// 导入表格
+import tableTree from "vue-table-with-tree-grid"
 
 // 导入网络请求axios
 import axios from 'axios'
@@ -19,6 +21,8 @@ axios.interceptors.request.use(config=>{
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
+Vue.component("table-tree", tableTree)
+
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
